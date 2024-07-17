@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#modal{
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+}
+
+
+
+.myModal{
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.close{
+   position: relative;
+   left: 260px;
+}
+
+.close:hover, .close:focus{
+    background-color: rgba(0, 0, 0);
+    cursor: pointer;
+    padding: 2px;
+}
+
+#nav-bar{
+    background-color: #007bff;
+    overflow: hidden;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+    height: 120px;
+}
+
+.container-fluid{
+    display: grid;
+    grid-area: auto;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.container-fluid > div{
+    text-align: center;
+}
+
+ul{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    animation: nav 2s ease-in-out;
+} 
+
+@keyframes nav {
+    from{
+        top: -20px;
+        opacity: 0.1;
+    }
+
+    to{
+        top: 8px;
+    }
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    font-size: 17px;
+   text-decoration: underline;
+}
+
+.dots{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    transition: ease 1s;
+}
+
+.active{
+    background-color:  gray;
+    transition: 1s 0.6;
+}
+
+.dots-con{
+    position: relative;
+    top: -50px;
+}
+
+.content{
+    animation-name: content;
+    animation-duration: 2s;
+    font-weight: bold;
+    color: white;
+}
+
+@keyframes content {
+    from{
+        opacity: 0.6;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.mySlide{
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+@keyframes slide {
+    from{
+        opacity: 0.8;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.item2{
+    padding: 10px;
+}
+
+iframe{
+    margin: 10px;
+}
+
+
+.item3{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item3 > div{
+    width: 500px;
+    height: 380px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 26px;
+    background-color: #007bff;
+    color: white;
+}
+
+.element {
+    opacity: 0;
+    transform: translateY(20px); /* Initial position */
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .animate {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+  
+
+.img{
+    width: 260px;
+    padding: 10px;
+}
+
+.item4{
+    color: white;
+    padding: 20px;
+}
+
+.offer{
+    width: 370px;
+    height: 480px;
+    margin: 50px;
+}
+
+.boundery{
+    background-color: #007bff;
+    padding: 30px;
+}
+
+.item5{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.item5 > div{
+    width: 400px;
+}
+
+.fb-account{
+    color: white;
+}
+
+.course-offered-item6{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.course-offered-item6 > div{
+    background-color: #007bff;
+    width: 90%;
+    color: whitesmoke;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+}
+
+.aboutCRT{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+}
+
+.aboutCRT > div{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    width: 600px;
+}
+
+    /*Resistration Modal  Style*/
+    #enrollModal{
+       display: none;
+    }
+    .enrollModal{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 2000;
+    }
+    
+    .enrollModal_Form{
+        position: relative;
+        top: 10px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    #enrollClose:hover, #enrollClose:focus{
+        cursor: pointer;
+    }
+
+    .form-collge{
+        width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-drop-down{
+    position: relative;
+    }
+
+    .nav-option-drop-down{
+    position: absolute;
+    display: none;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: #0079FF;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    width: 150px;
+    }
+
+    .nav-drop-down:hover .nav-option-drop-down{
+        display: block;
+        text-align: center;
+        padding: 1px;
+      }
+
+      .drop_down_menu{
+        background-color: white;
+        color: black;
+        border-style: hidden;
+      }
+
+      .drop_down_menu:hover{
+        background-color: rgb(230, 218, 218);
+        padding: 1px;
+        border-radius: 2px;
+      }
+
+      .hover-span:hover, .hover-span:focus{
+            cursor: pointer;
+      }
+
+      #shsForm{
+        display: none;
+      }
+
+      #shsclose{
+        cursor: pointer;
+      }
+
+.errorMessage{
+    background-color: red;
+    color: whitesmoke;
+}

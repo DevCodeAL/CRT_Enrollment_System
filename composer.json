@@ -1,0 +1,7 @@
+{
+    "require": {
+        "stripe/stripe-php": "^14.3",
+        "paymongo/paymongo-php": "^0.0.0",
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}
